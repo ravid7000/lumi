@@ -2,6 +2,8 @@ import React from 'react';
 
 // atoms
 import Typography from 'atoms/Typography';
+import Box from 'atoms/Box';
+
 import {
   Container,
   List,
@@ -11,7 +13,6 @@ import {
   Root,
   UserSavedRoot,
 } from './GetStarted.styles';
-import Box from 'atoms/Box';
 
 interface GetStartedProps {
   items: { id: string; name: string }[];
@@ -35,6 +36,16 @@ function GetStarted({}: GetStartedProps): JSX.Element {
       >
         <ListRoot>
           <List>
+            <ListItem
+              withBorder
+              withSpacing
+            >
+              <Typography
+                variant="h6"
+                text="Templates"
+                mb="xs"
+              />
+            </ListItem>
             <ListItem>
               <ListItemButton>
                 <Typography text="Blank" />
@@ -48,7 +59,14 @@ function GetStarted({}: GetStartedProps): JSX.Element {
           </List>
         </ListRoot>
         <UserSavedRoot>
-          <Typography text="Get Started Screen" />
+          <Box
+            displayType="flex"
+            alignItems="center"
+            justifyContent="center"
+            height="100%"
+          >
+            <Typography text="No saved file found. Create new from template." />
+          </Box>
         </UserSavedRoot>
       </Container>
     </Root>

@@ -1,5 +1,6 @@
 import Paper from 'atoms/Paper';
 import styled from 'styled-components';
+import type { ListItemProps } from './types';
 
 export const Root = styled(Paper)`
   position: fixed;
@@ -32,9 +33,12 @@ export const List = styled.ul`
   list-style-type: none;
 `;
 
-export const ListItem = styled.li`
-  margin: 0;
+export const ListItem = styled.li<ListItemProps>`
+  margin: ${({ withSpacing, theme }) =>
+    withSpacing ? theme.spacing.toPoint('0', '0', '4', '0') : '0'};
   padding: ${({ theme }) => theme.spacing.toPoint('2', '0')};
+  ${({ withBorder, theme }) =>
+    withBorder ? `border-bottom: 1px solid ${theme.colors.neutral[50]};` : ''}
 `;
 
 export const ListItemButton = styled.button`

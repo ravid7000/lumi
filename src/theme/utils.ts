@@ -52,13 +52,13 @@ export function spacingProps<Props extends SpacingProps & { theme: Theme }>(
       str += `margin-top: ${normalizeSpacing(sp.mt, sp.theme)};`;
     }
     if (sp.mb) {
-      str += `margin-top: ${normalizeSpacing(sp.mb, sp.theme)};`;
+      str += `margin-bottom: ${normalizeSpacing(sp.mb, sp.theme)};`;
     }
     if (sp.ml) {
-      str += `margin-top: ${normalizeSpacing(sp.ml, sp.theme)};`;
+      str += `margin-left: ${normalizeSpacing(sp.ml, sp.theme)};`;
     }
     if (sp.mr) {
-      str += `margin-top: ${normalizeSpacing(sp.mr, sp.theme)};`;
+      str += `margin-right: ${normalizeSpacing(sp.mr, sp.theme)};`;
     }
   }
 

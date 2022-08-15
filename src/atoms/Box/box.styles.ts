@@ -9,8 +9,10 @@ import {
 import type { BoxProps } from './types';
 
 export const Box = styled.div<BoxProps>`
-  ${(props) => (props.color ? `color: ${props.color};` : '')}
-  ${(props) => (props.bgColor ? `background-color: ${props.bgColor};` : '')}
+  ${({ color }) => (color ? `color: ${color};` : '')}
+  ${({ bgColor }) => (bgColor ? `background-color: ${bgColor};` : '')}
+  ${({ height }) => (height ? `height: ${height};` : '')}
+  ${({ width }) => (width ? `width: ${width};` : '')}
   ${spacingProps}
   ${radiusProps}
   ${displayProps}

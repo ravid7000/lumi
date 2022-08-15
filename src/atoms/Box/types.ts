@@ -13,4 +13,6 @@ export type BoxProps = SpacingProps & {
   displayType?: DisplayProps;
   alignItems?: FlexAlignItems;
   justifyContent?: FlexJustifyContents;
+  height?: string;
+  width?: string;
 };
